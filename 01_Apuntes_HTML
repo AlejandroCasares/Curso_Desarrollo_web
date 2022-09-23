@@ -1,0 +1,53 @@
+Apuntes
+
+Clase 14.
+
+HTML es un lenguaje, pero no un lenguaje de programación, ya que no tiene funciones.
+Sirve para dar estructura, orden y representar información a los usuarios.
+HTML tiene una sintaxis fácil y clara:
+  <p> = Párrafos
+  <nav> = Navegaciones
+  <header> = Encabezado del sitio
+  ...
+  
+  <html>
+    <head>
+      <title> Mi página web </web>
+    </head>
+    <body>
+    
+    </body>
+    
+SIEMPRE debe haber un fichero que se llama "index" que será la página principal, lo primero que se muestre.
+
+La mayoría de las etiquetas tiene su correspondiente cierre, que es igual pero con la barra "/"
+  
+  
+Normas no escritas: Sólo se pone un h1 por cada fichero html
+
+https://es.lipsum.com/ página para generar texto
+
+Estructurar el contenido de un HTML significa agrupar el contenido en distintos bloques en función de lo que contiene. 
+
+Las etiquetas para agrupar son:
+
+<header> - El encabezado, la parte superior
+<footer> - La parte inferior
+<nav>. - Panel de vagación 
+<main> - Lo principal
+<section> - Para una sección (se puede usar varias veces)
+<article> - Para articulos/noticias
+<aside> - Para barra lateral
+<div> - Se usa sólo cuando no podemos usar ninguno de los otros.
+
+¡IMPORTANTE! Para agrupar es necesario visualizar el diseño que quieres realizar.
+
+Por cada nuevo heading que nos encontremos (h1,h2,h3...) debe haber un section. 
+A menos que, en vez de un section, pongamos para ese heading un main (ya que el main es + importante)
+
+Cada etiqueta tiene su atributo.
+
+La etiqueta <a> para crear enlacnes, tiene el atributo href
+
+Página para buscar iconos:
+https://tablericons.com/
