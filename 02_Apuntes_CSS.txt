@@ -1,0 +1,31 @@
+
+El rol de CSS es el de configurar los colores, tamaños, espacios, animaciones...
+
+Mientras que HTML se ocupa de la información
+CSS se encarga de la presentación
+
+CSS son hojas de estilo en cascada que permitirán darle al código un diseño único y especial
+
+* Tamaños y tipos de fuentes
+* Colores
+* Espacios
+* Margenes
+* etc
+
+
+Anatomía de CSS
+1. Un selector (p)
+2. Delimitadores del código css, todo lo que hagamos estará dentro{ }
+3.Propiedad. (color) hay muchas propiedades
+4. Valor que le damos a la propiedad (blue)
+5. la propiedad debe continuar por dos puntos (:) y el valor debe cerrarse con punto y coma (;)
+
+p {
+ color:blue;
+  }
+  
+  
+  ¿Porqué en casacada?
+  Porque si tienes dos veces el mismo código, se aplicará el último.
+  
+  
