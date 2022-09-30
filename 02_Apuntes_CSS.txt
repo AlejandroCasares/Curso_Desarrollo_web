@@ -24,8 +24,51 @@ p {
  color:blue;
   }
   
-  
   ¿Porqué en casacada?
   Porque si tienes dos veces el mismo código, se aplicará el último.
   
   
+Ese que acabamos de ver, es un selector de elemento.
+
+Pero también existe el "Selector de clase":
+
+  .clase {
+     color:blue;
+  }
+
+Una de sus ventajas al ser una clase es que es reutilizable
+Se caracterizan por comenzar con un punto.
+Cliente no es una etiqueta de HTML, pero lo defines como clase.
+
+También puedes tener "Selectores de ID". Puedes tener múltiples ID's por página, pero sus nombres no pueden repetirse.
+Solo puede haber un ID con un determinado nombre por página.
+
+El "selector de atributos" seleccionará elementos en función de algún atributo en particular que definas:
+[scr="logo.jpg"]{
+  color:blue;
+}
+
+También está la "Combinación de descendentes".
+Pongamos que tenemos una clase, dentro de otra clase. Selecciona los elementos hijos cuyo padre sea una clase (o ID) en específico
+
+.clase .nombre{
+     color:blue;
+  }
+
+También tenemos "Todos los hijos" que aplica la regla a todos los párrafos hijos. La sintaxis sería:
+
+.clientes > p{
+     color:blue;
+  }
+  
+  Seleccionaría todos los párrafos que sean hijos de algo que tengan la clase de 'clientes' (Puede ser un párrafo de una sección, header...)
+  
+  Como vemos, se puede combinar elementos de CSS (como la "Combinación de descendientes") con elementos de HTML (como ahora combinando clases con párrafos)
+  
+  
+  Cuanto más específico sea un selector, más probable será que se le aplique, sin importar tanto el orden en el que se describen.
+  --> Aunque sea en cascada, el selector más específico tendrá más peso que el más genérico
+  
+  ESPECIFIDAD: Es como el navegador va a mostrar el CSS de acuerdo a que tan especifico es el Selector que hemos creado.
+               CSS es en cascada, pero eso no significa que si un selector aparece después de otro será tomado en su cuenta sino más bien su especifidad
+      - -> Hay "efecto cascada, sí" pero dentro del mismo nivel de especificidad.
