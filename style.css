@@ -1,0 +1,296 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #000000;
+    --oscuro: #212121;
+    --primario: #349BF6;
+    --complementario: #F68F34;
+    --analogo_claro: #349BF6;
+    --analogo_oscuro: #343AF6;
+    --gris:#757575;
+    --grisClaro: #DFE9F3;
+
+    --funete_principal: 3.6rem;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+body{
+    font-size: 16px; /*  1rem = 10px  */
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 80%);
+}
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .sombra{
+    -webkit-box-shadow: 0px 9px 15px 0px rgba(150,150,150,0.59);
+-moz-box-shadow: 0px 9px 15px 0px rgba(150,150,150,0.59);
+box-shadow: 0px 9px 15px 0px rgba(150,150,150,0.59);
+background-color: var(--blanco);
+padding: 2rem;
+border-radius: 1rem;
+  }
+
+  h1 {
+    font-size: 3.8rem;
+  }
+
+h2{ 
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/*
+.titulo{
+    text-align: center;
+    text-decoration: underline;
+    text-transform:uppercase;
+    font-size: var(--funete_principal);
+    font-family: Arial, Helvetica, sans-serif;
+}
+*/
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-top: 0rem;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    /* Escribimos lo mismo, pero usando margin */ 
+    margin: 0 auto 3 auto;
+}
+
+.boton{
+    background-color: var(--analogo_claro);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    border: none;
+}
+
+@media (min-width:768px) {
+    .boton{
+       width: auto;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.nav-bg{
+    background-color: var(--analogo_oscuro); 
+}
+
+.Navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width:768px) {
+    .Navegacion-principal{
+        flex-direction: row;
+        justify-content:space-between;
+    }
+}
+
+/*
+Media query de 480 -> smartphone
+Media query de 768 -> tablet
+Media query de 1140 -> laptop
+Media query de 1400 -> Para pantallas de PC muy grandes
+*/
+
+.Navegacion-principal a {
+   padding: 1rem;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold; /* En vez de bold podríamos poner 700, es lo mismo*/
+}
+.Navegacion-principal a:hover{
+  background-color: var(--analogo_claro);
+  color: var(--oscuro);
+}
+
+/* 
+p{
+  background-color: var(--complementario);
+}
+*/ 
+
+
+/* Vamos a hacer "Responsible" nuestra pag web con Media query*/
+
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0,0.47); /* Sintaxis anterior */
+    background-color: rgb(0 0 0 / 47%); /* Hacemos lo mismo pero de otra forma*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p { /**/
+    color: var(--blanco)
+}
+
+.servicios,
+.Navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/*servicios*/
+@media (min-width: 768px){
+    .servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* ese "fr" significa fracción
+    en vez de ir poniendo el porcentaje de pantalla
+    que coge cada columna (33.3% 33.3% 33.3%)
+    Tambíen podríamos poner repeat(3, 1fr) vez de */
+
+    column-gap: 1rem;
+    
+    /* Vamos a escribir el mismo código de dos formas:
+    1)
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px;
+    2)
+    grid: 350px 800px / 300px 300px;
+    */
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.servicio h3{
+    color: var(--analogo_oscuro);
+    font-weight: bold;
+}
+
+.servicio p{
+    line-height: 2;
+}
+
+.servicio .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--complementario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Contacto*/
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%); /*min utiliza el valor más pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--complementario)
+}
+
+@media (min-width: 768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto 20rem;
+        column-gap: 1rem;
+    }
+}
+
+.campo:nth-child(4){
+    grid-column:1 / 3 ;
+}
+.campo:nth-child(5){
+    grid-column:1 / 3 ;
+}
+
+.campo{
+    margin-bottom: 1rem;
+    
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.3rem;
+    border-radius: .5rem;
+}
+
+.footer {
+    text-align: center;
+}
