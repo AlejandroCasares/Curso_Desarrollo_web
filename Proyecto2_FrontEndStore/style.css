@@ -1,0 +1,127 @@
+
+:root{
+    --primario: #F5EEA4;
+    --analogo1: #DEBE8A;
+    --analogo2: #FAB09B;
+    --complementario1: #A1DE8A;
+    --complementario2:#9EFFD8;
+    --blanco: #FFFFFF;
+    --negro: #000000; 
+    --gris_claro:#E0E0E0;
+    --gris_oscuro: #5E5E5E;
+
+    --fuentePrincipal: 'Great Vibes', cursive;
+
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62,5%; /** Esto nos permite hacer que 1rem = 10 pixeles */ 
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* Globales*/
+
+  /*Cuerpo de la página*/
+  body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+/*Párrafos*/
+  p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+  }
+
+  /*Enlaces*/
+  a {
+    text-decoration: none;
+  }
+
+    /*Imágenes*/
+    img {
+        max-width: 100%;
+    }
+
+    .contenedor{
+        max-width: 120rem;
+        margin: 0 auto; /*Para centrar el contenido*/
+    }
+
+    h1, h2, h3{
+        text-align: center;
+        color: var(--analogo2);
+        font-family: var(--fuentePrincipal);
+    }
+
+    h1{ font-size: 4rem;}
+
+    h2{font-size: 3.2rem;}
+
+    h3{font-size: 2.4rem;}
+
+    /*Header*/
+
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__logo{
+        margin: 3rem 0;
+    }
+
+    /*Footer*/
+
+    .footer {
+        background-color: var(--analogo2);
+        padding: 1rem o;
+        margin-top: 2rem;
+        text-align: center;    }
+
+    .footer_texto{
+        font-family: var(--fuentePrincipal);
+        font-size: 2.2rem;
+    }
+
+    /*Navegación*/
+    .navegacion{
+        background-color: var(--analogo2);
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+        /* --> gap: 2rem; <-- Separación de las etiquetas de una forma nueva en CSS*/
+    }
+
+    .navegacion__enlace{
+        font-family: var(--fuentePrincipal);
+        color: var(--blanco);
+        font-size: 3rem;
+        margin-right: 2rem;
+    }
+
+    .navegacion__enlace:hover,
+    .navegacion__enlace--activo{
+        color: var(--primario);
+    }
+
+    .producto{    }
+
+    .producto__imagen{
+
+    }
+
+    .producto__nombre{
+
+    }
+
+    .producto__precio{
+
+    }
+    
