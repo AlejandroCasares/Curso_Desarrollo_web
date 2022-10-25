@@ -34,7 +34,7 @@ html {
 
 /*Párrafos*/
   p{
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--blanco);
   }
@@ -52,6 +52,7 @@ html {
     .contenedor{
         max-width: 120rem;
         margin: 0 auto; /*Para centrar el contenido*/
+        padding: 0 2rem;
     }
 
     h1, h2, h3{
@@ -81,7 +82,7 @@ html {
 
     .footer {
         background-color: var(--analogo2);
-        padding: 1rem o;
+        padding: 1rem 0;
         margin-top: 2rem;
         text-align: center;    }
 
@@ -111,17 +112,118 @@ html {
         color: var(--primario);
     }
 
-    .producto{    }
+    /*Grid -- Para ver los productos en columnas de 3
+               o de 2 si la pantalla es pequeña*/
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 2rem;
+    }
+
+    @media(min-width: 768px){
+      .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+       }
+    }
+
+/* Producto */
+    .producto{
+      background-color: var(--analogo2);
+      padding: 1rem;
+        }
 
     .producto__imagen{
-
+      width: 100%;
     }
 
     .producto__nombre{
-
+      font-size: 2rem;
+      margin: 1rem 0;
+      text-align: center;
+      line-height: 1.1rem;
     }
 
     .producto__precio{
-
+      font-size: 1.8rem;
+      color: var(--primario);
+      margin: 1rem 0;
+      text-align: center;
+      line-height: 1.1rem;
     }
+
+    /* Graficos (Imagenes) */
+
+    .grafico{
+      min-height: 30rem;
+      background-repeat: none;
+      background-size: cover;
+        }
+
+    .grafico--camisas{
+      grid-row: 2 / 3;
+      grid-column: 1 / 3;
+      background-image: url(../img/grafico1.jpg);
+    }
+
+    .grafico--node{
+      grid-row: 8 / 9;
+      grid-column: 1 / 3;
+      background-image: url(../img/grafico2.jpg);
+    }
+
+    @media(min-width: 768px){
+      .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        background-image: url(../img/grafico2.jpg);
+      }
+  }
     
+  .texto__nosotros{
+    text-align: justify;
+    font-size: 2rem;
+    color: var(--analogo2);
+
+  }
+
+/* Imagen de la página "Sobre nosotros*/
+
+
+.nosotros{
+  display: grid;
+  grid-template-rows: repeat(2, auto);  
+}
+
+@media(min-width:786px){
+  .nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+
+.nosotros__contenido--texto{
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  text-align: center;
+  line-height: 1.1rem;
+  color: var(--negro);
+}
+
+.nosotros__imagen{
+  grid-row: 1 / 2;
+  width: 100%;
+}
+
+@media(min-width:786px){
+  .nosotros__imagen{
+    grid-column: 2 / 3;
+    width: 100%;
+  }
+}
